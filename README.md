@@ -45,7 +45,7 @@ start the application
 
 ## Author
 
-## Iury Vasconcelos Leitão - [GitHub](https://github.com/iury0393) / [Linkedin](https://www.linkedin.com/in/iury-vasconcelos-dev/) / [Email](mailto:iury0393@gmail.com)
+### Iury Vasconcelos Leitão - [GitHub](https://github.com/iury0393) / [Linkedin](https://www.linkedin.com/in/iury-vasconcelos-dev/) / [Email](mailto:iury0393@gmail.com)
 
 Distributed under the MIT license. See `LICENSE` for more information.
 
@@ -56,5 +56,9 @@ Distributed under the MIT license. See `LICENSE` for more information.
 3. Commit your changes (`git commit -am 'Add something'`)
 4. Push to the branch (`git push origin feature/`)
 5. Create a new Pull Request
+
+## Design
+
+<a href="https://www.youtube.com/watch?v=bkR7naR1efA">Video-inspired design</a>
 
 <p align="center">Develop by <a href="https://github.com/iury0393">Iury Vasconcelos</a></p>
