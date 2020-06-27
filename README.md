@@ -59,6 +59,6 @@ Distributed under the MIT license. See `LICENSE` for more information.
 
 ## Design
 
-<a href="https://www.youtube.com/watch?v=bkR7naR1efA">Video-inspired design</a>
+<a href="https://www.youtube.com/watch?v=OgSLd2lH1FM&t">Inspired design</a>
 
 <p align="center">Develop by <a href="https://github.com/iury0393">Iury Vasconcelos</a></p>
