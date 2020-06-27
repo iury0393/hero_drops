@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hero_drops/constants.dart';
-import 'package:hero_drops/screens/product/products_screen.dart';
 
 void main() {
   runApp(MyApp());
