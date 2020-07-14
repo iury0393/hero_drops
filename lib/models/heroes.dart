@@ -1,12 +1,12 @@
 // Our movie model
-class Movie {
+class Heroes {
   final int id, year, numOfRatings, criticsReview, metascoreRating;
   final double rating;
   final List<String> genra;
   final String plot, title, poster, backdrop;
   final List<Map> cast;
 
-  Movie({
+  Heroes({
     this.poster,
     this.backdrop,
     this.title,
@@ -23,8 +23,8 @@ class Movie {
 }
 
 // our demo data movie data
-List<Movie> movies = [
-  Movie(
+List<Heroes> heroes = [
+  Heroes(
     id: 1,
     title: "Bloodshot",
     year: 2020,
@@ -59,7 +59,7 @@ List<Movie> movies = [
       },
     ],
   ),
-  Movie(
+  Heroes(
     id: 2,
     title: "Ford v Ferrari ",
     year: 2019,
@@ -94,7 +94,7 @@ List<Movie> movies = [
       },
     ],
   ),
-  Movie(
+  Heroes(
     id: 1,
     title: "Onward",
     year: 2020,

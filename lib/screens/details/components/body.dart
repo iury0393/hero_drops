@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hero_drops/constants.dart';
-import 'package:hero_drops/models/movie.dart';
+import 'package:hero_drops/models/heroes.dart';
 
 import 'backdrop_rating.dart';
 import 'cast_and_crew.dart';
@@ -8,9 +8,9 @@ import 'genres.dart';
 import 'title_duration_and_fav_btn.dart';
 
 class Body extends StatelessWidget {
-  final Movie movie;
+  final Heroes heroes;
 
-  const Body({Key key, this.movie}) : super(key: key);
+  const Body({Key key, this.heroes}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     // it will provide us total height and width
@@ -19,10 +19,10 @@ class Body extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          BackdropAndRating(size: size, movie: movie),
+          BackdropAndRating(size: size, heroes: heroes),
           SizedBox(height: kDefaultPadding / 2),
-          TitleDurationAndFabBtn(movie: movie),
-          Genres(movie: movie),
+          TitleDurationAndFabBtn(heroes: heroes),
+          Genres(heroes: heroes),
           Padding(
             padding: EdgeInsets.symmetric(
               vertical: kDefaultPadding / 2,
@@ -36,13 +36,13 @@ class Body extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
             child: Text(
-              movie.plot,
+              heroes.plot,
               style: TextStyle(
                 color: Color(0xFF737599),
               ),
             ),
           ),
-          CastAndCrew(casts: movie.cast),
+          CastAndCrew(casts: heroes.cast),
         ],
       ),
     );

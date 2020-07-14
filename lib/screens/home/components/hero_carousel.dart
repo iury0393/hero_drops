@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 import 'dart:math' as math;
 
-import 'package:hero_drops/models/movie.dart';
+import 'package:hero_drops/models/heroes.dart';
 
 import '../../../constants.dart';
-import 'movie_card.dart';
+import 'hero_card.dart';
 
-class MovieCarousel extends StatefulWidget {
+class HeroCarousel extends StatefulWidget {
   @override
-  _MovieCarouselState createState() => _MovieCarouselState();
+  _HeroCarouselState createState() => _HeroCarouselState();
 }
 
-class _MovieCarouselState extends State<MovieCarousel> {
+class _HeroCarouselState extends State<HeroCarousel> {
   PageController _pageController;
   int initialPage = 1;
 
@@ -47,7 +47,7 @@ class _MovieCarouselState extends State<MovieCarousel> {
           },
           controller: _pageController,
           physics: ClampingScrollPhysics(),
-          itemCount: movies.length, // we have 3 demo movies
+          itemCount: heroes.length, // we have 3 demo movies
           itemBuilder: (context, index) => buildMovieSlider(index),
         ),
       ),
@@ -69,7 +69,7 @@ class _MovieCarouselState extends State<MovieCarousel> {
             opacity: initialPage == index ? 1 : 0.4,
             child: Transform.rotate(
               angle: math.pi * value,
-              child: MovieCard(movie: movies[index]),
+              child: HeroCard(heroes: heroes[index]),
             ),
           );
         },

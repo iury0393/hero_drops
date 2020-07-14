@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 
-// We need stateful widget because we need to change some sate on our category
 class Categorylist extends StatefulWidget {
   @override
   _CategorylistState createState() => _CategorylistState();
@@ -10,7 +9,14 @@ class Categorylist extends StatefulWidget {
 
 class _CategorylistState extends State<Categorylist> {
   int selectedCategory = 0;
-  List<String> categories = ["In Theater", "Box Office", "Coming Soon"];
+  List<String> categories = [
+    "Personagens",
+    "Quadrinhos",
+    "Criadores",
+    "Eventos",
+    "Séries",
+    "Histórias"
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hero_drops/models/movie.dart';
+import 'package:hero_drops/models/heroes.dart';
 
 import '../../../constants.dart';
 
@@ -8,11 +8,11 @@ class BackdropAndRating extends StatelessWidget {
   const BackdropAndRating({
     Key key,
     @required this.size,
-    @required this.movie,
+    @required this.heroes,
   }) : super(key: key);
 
   final Size size;
-  final Movie movie;
+  final Heroes heroes;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class BackdropAndRating extends StatelessWidget {
               borderRadius: BorderRadius.only(bottomLeft: Radius.circular(50)),
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage(movie.backdrop),
+                image: AssetImage(heroes.backdrop),
               ),
             ),
           ),
@@ -69,7 +69,7 @@ class BackdropAndRating extends StatelessWidget {
                             style: TextStyle(color: Colors.black),
                             children: [
                               TextSpan(
-                                text: "${movie.rating}/",
+                                text: "${heroes.rating}/",
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.w600),
                               ),
@@ -104,7 +104,7 @@ class BackdropAndRating extends StatelessWidget {
                             borderRadius: BorderRadius.circular(2),
                           ),
                           child: Text(
-                            "${movie.metascoreRating}",
+                            "${heroes.metascoreRating}",
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.white,

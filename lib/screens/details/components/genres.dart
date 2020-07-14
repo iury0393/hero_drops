@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:hero_drops/components/genre_card.dart';
-import 'package:hero_drops/models/movie.dart';
+import 'package:hero_drops/components/heroes_card.dart';
+import 'package:hero_drops/models/heroes.dart';
 
 import '../../../constants.dart';
 
 class Genres extends StatelessWidget {
   const Genres({
     Key key,
-    @required this.movie,
+    @required this.heroes,
   }) : super(key: key);
 
-  final Movie movie;
+  final Heroes heroes;
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +20,9 @@ class Genres extends StatelessWidget {
         height: 36,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: movie.genra.length,
-          itemBuilder: (context, index) => GenreCard(
-            genre: movie.genra[index],
+          itemCount: heroes.genra.length,
+          itemBuilder: (context, index) => HeroesCard(
+            type: heroes.genra[index],
           ),
         ),
       ),

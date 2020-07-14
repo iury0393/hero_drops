@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:hero_drops/models/movie.dart';
+import 'package:hero_drops/models/heroes.dart';
 
 import '../../../constants.dart';
 
 class TitleDurationAndFabBtn extends StatelessWidget {
   const TitleDurationAndFabBtn({
     Key key,
-    @required this.movie,
+    @required this.heroes,
   }) : super(key: key);
 
-  final Movie movie;
+  final Heroes heroes;
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +22,14 @@ class TitleDurationAndFabBtn extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  movie.title,
+                  heroes.title,
                   style: Theme.of(context).textTheme.headline5,
                 ),
                 SizedBox(height: kDefaultPadding / 2),
                 Row(
                   children: <Widget>[
                     Text(
-                      '${movie.year}',
+                      '${heroes.year}',
                       style: TextStyle(color: kTextLightColor),
                     ),
                     SizedBox(width: kDefaultPadding),

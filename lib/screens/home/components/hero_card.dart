@@ -1,14 +1,14 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hero_drops/models/movie.dart';
+import 'package:hero_drops/models/heroes.dart';
 import 'package:hero_drops/screens/details/details_screen.dart';
 import '../../../constants.dart';
 
-class MovieCard extends StatelessWidget {
-  final Movie movie;
+class HeroCard extends StatelessWidget {
+  final Heroes heroes;
 
-  const MovieCard({Key key, this.movie}) : super(key: key);
+  const HeroCard({Key key, this.heroes}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,7 +17,7 @@ class MovieCard extends StatelessWidget {
         closedElevation: 0,
         openElevation: 0,
         closedBuilder: (context, action) => buildMovieCard(context),
-        openBuilder: (context, action) => DetailsScreen(movie: movie),
+        openBuilder: (context, action) => DetailsScreen(heroes: heroes),
       ),
     );
   }
@@ -32,7 +32,7 @@ class MovieCard extends StatelessWidget {
               boxShadow: [kDefaultShadow],
               image: DecorationImage(
                 fit: BoxFit.fill,
-                image: AssetImage(movie.poster),
+                image: AssetImage(heroes.poster),
               ),
             ),
           ),
@@ -40,7 +40,7 @@ class MovieCard extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
           child: Text(
-            movie.title,
+            heroes.title,
             style: Theme.of(context)
                 .textTheme
                 .headline5
@@ -56,7 +56,7 @@ class MovieCard extends StatelessWidget {
             ),
             SizedBox(width: kDefaultPadding / 2),
             Text(
-              "${movie.rating}",
+              "${heroes.rating}",
               style: Theme.of(context).textTheme.bodyText2,
             )
           ],

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-
 import 'package:hero_drops/constants.dart';
 
-class GenreCard extends StatelessWidget {
-  final String genre;
+class HeroesCard extends StatelessWidget {
+  final String type;
 
-  const GenreCard({Key key, this.genre}) : super(key: key);
+  const HeroesCard({Key key, this.type}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +19,7 @@ class GenreCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Text(
-        genre,
+        type,
         style: TextStyle(color: kTextColor.withOpacity(0.8), fontSize: 16),
       ),
     );

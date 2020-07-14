@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hero_drops/constants.dart';
 
 import 'categories.dart';
-import 'genres.dart';
-import 'movie_carousel.dart';
+import 'hero_carousel.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -13,9 +12,8 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Categorylist(),
-          Genres(),
           SizedBox(height: kDefaultPadding),
-          MovieCarousel(),
+          HeroCarousel(),
         ],
       ),
     );
