@@ -12,8 +12,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hero Drops',
-      theme: ThemeData(
+      theme: ThemeData.dark().copyWith(
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        backgroundColor: Color(0xFF303030),
       ),
       home: HomeScreen(),
     );

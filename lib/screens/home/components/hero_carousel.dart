@@ -48,13 +48,13 @@ class _HeroCarouselState extends State<HeroCarousel> {
           controller: _pageController,
           physics: ClampingScrollPhysics(),
           itemCount: heroes.length, // we have 3 demo movies
-          itemBuilder: (context, index) => buildMovieSlider(index),
+          itemBuilder: (context, index) => buildHeroSlider(index),
         ),
       ),
     );
   }
 
-  Widget buildMovieSlider(int index) => AnimatedBuilder(
+  Widget buildHeroSlider(int index) => AnimatedBuilder(
         animation: _pageController,
         builder: (context, child) {
           double value = 0;

@@ -48,7 +48,7 @@ class _CategorylistState extends State<Categorylist> {
                     fontWeight: FontWeight.w600,
                     color: index == selectedCategory
                         ? kTextColor
-                        : Colors.black.withOpacity(0.4),
+                        : Colors.white.withOpacity(0.3),
                   ),
             ),
             Container(

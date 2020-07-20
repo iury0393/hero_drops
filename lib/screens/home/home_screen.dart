@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:hero_drops/constants.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hero_drops/screens/home/components/body.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: buildAppBar(),
       body: Body(),
     );
@@ -15,20 +13,17 @@ class HomeScreen extends StatelessWidget {
 
   AppBar buildAppBar() {
     return AppBar(
-      backgroundColor: Colors.white,
-      elevation: 0,
-      leading: IconButton(
-        padding: EdgeInsets.only(left: kDefaultPadding),
-        icon: SvgPicture.asset("assets/icons/menu.svg"),
-        onPressed: () {},
-      ),
-      actions: <Widget>[
-        IconButton(
-          padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-          icon: SvgPicture.asset("assets/icons/search.svg"),
-          onPressed: () {},
+      title: Text(
+        'HERO DROPS',
+        style: GoogleFonts.marvel(
+          textStyle: TextStyle(
+            fontSize: 40,
+            fontWeight: FontWeight.w700,
+            color: Color(0xFFED1D23),
+          ),
         ),
-      ],
+      ),
+      elevation: 0,
     );
   }
 }
