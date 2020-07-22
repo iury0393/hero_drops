@@ -1,5 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hero_drops/models/heroes.dart';
 import 'package:hero_drops/screens/details/details_screen.dart';
 import '../../../constants.dart';
@@ -40,6 +41,15 @@ class HeroCard extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
+            child: Text(
+              heroes.title,
+              style: GoogleFonts.permanentMarker(
+                textStyle: TextStyle(
+                  fontSize: 20,
+                  color: kTextColor,
+                ),
+              ),
+            ),
           ),
         ],
       ),
