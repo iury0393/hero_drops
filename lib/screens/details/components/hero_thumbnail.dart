@@ -18,13 +18,18 @@ class HeroThumbnail extends StatelessWidget {
       height: size.height * 0.4,
       child: Stack(
         children: <Widget>[
-          Container(
-            height: size.height * 0.4 - 50,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(50)),
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(heroes.backdrop),
+          Hero(
+            tag: 'thumb',
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(50),
+                  bottomRight: Radius.circular(50),
+                ),
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(heroes.backdrop),
+                ),
               ),
             ),
           ),

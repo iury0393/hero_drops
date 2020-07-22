@@ -28,14 +28,11 @@ class HeroCard extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Expanded(
-            child: Container(
-              decoration: BoxDecoration(
+            child: Hero(
+              tag: 'thumb',
+              child: ClipRRect(
+                child: Image.asset(heroes.poster),
                 borderRadius: BorderRadius.circular(50),
-                boxShadow: [kDefaultShadow],
-                image: DecorationImage(
-                  fit: BoxFit.fill,
-                  image: AssetImage(heroes.poster),
-                ),
               ),
             ),
           ),
